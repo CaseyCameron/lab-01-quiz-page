@@ -1,10 +1,9 @@
-import { isYes } from './utils.js';
+import { isYes, gradeScore } from './utils.js';
 
 const launchQuizButton = document.getElementById('launch-quiz-button');
 const finalScore = document.getElementById('final-score');
 
 launchQuizButton.addEventListener('click', () => {    
-    console.log('launched');
     //confirm user wants to take the test, if not return
     const userConfirm = confirm('Are you sure you want to take this test? y/n');
     if (!userConfirm) return;
@@ -25,5 +24,5 @@ launchQuizButton.addEventListener('click', () => {
     const scoreResults = `${name}, you got ${score} answer right.`;
 
     finalScore.textContent = scoreResults;
-
+    gradeScore(score);
 });
