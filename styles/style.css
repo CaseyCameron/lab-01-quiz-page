@@ -18,7 +18,7 @@ body {
     --gutter: 10px;
     --footer-height: 25px;
     
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Harmattan', sans-serif;
     background-color: var(--color2);
     background-image: url(https://esossl-a.akamaihd.net/assets/img/crownstore/items/69f1d6c29fb4c72925f6b18d5250f5c5.jpg);
     background-repeat: no-repeat;
@@ -27,15 +27,31 @@ body {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 50px auto;
     justify-content: center;
     align-items: center;
-    margin-bottom: calc(var(--footer-height));
 }
 
 img{
     width: 100px;
+}
+
+.left-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    text-align: left;
+    width: 200px;
+    height: 100%;
+    color:seashell;
+    background-image: linear-gradient(to right, black, gray);
+    opacity: 0.8;
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
+    margin-top: var(--gutter);
+    margin-bottom: var(--gutter);
+    border: solid 2px var(--color1);
 }
 
 section {
@@ -53,6 +69,17 @@ section {
     border: solid 2px var(--color1);
 }
 
+.content-text, #final-score{
+    width: 50%;
+    color:seashell;
+    background-image: linear-gradient(to right, black, gray);
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
 .go-left-damnit { 
     display: inline;
 }
@@ -63,6 +90,19 @@ header {
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
+}
+
+#launch-quiz-button{
+    display: grid;
+    grid-column: auto;
+    justify-content: center;
+    align-content: center;
+    width: 100px;
+}
+
+#final-score{
+    font-family: monospace;
+    font-weight: normal;
 }
 
 footer {
@@ -78,6 +118,10 @@ h2 {
     font-weight: bold;
 }
 
+a {
+    color: white;
+}
+
 .gutter-right {
     margin-right: 20px;
 }
@@ -88,17 +132,6 @@ h2 {
 
 header img {
     height: var(--header-height);
-}
-
-.content-text, #final-score{
-    width: 50%;
-    color:seashell;
-    background-image: linear-gradient(to right, black, gray);
-    opacity: 0.8;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
 }
   
 footer {

@@ -1,7 +1,7 @@
 import { isYes, gradeScore } from './utils.js';
 
 const launchQuizButton = document.getElementById('launch-quiz-button');
-const finalScore = document.getElementById('final-score');
+
 
 launchQuizButton.addEventListener('click', () => {    
     //confirm user wants to take the test, if not return
@@ -21,8 +21,6 @@ launchQuizButton.addEventListener('click', () => {
     if (isYes(secondAnswer)) score ++;
     if (!isYes(thirdAnswer)) score ++;
     alert('Congrats, you finished. See your results below');
-    const scoreResults = `${name}, you got ${score} answer right.`;
-
-    finalScore.textContent = scoreResults;
-    gradeScore(score);
+    const scoreResults = '';
+    gradeScore(score, name, scoreResults);
 });
