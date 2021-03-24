@@ -15,11 +15,15 @@ body {
     
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
-    --gutter: 30px;
+    --gutter: 10px;
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
+    background-image: url(https://esossl-a.akamaihd.net/assets/img/crownstore/items/69f1d6c29fb4c72925f6b18d5250f5c5.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
 }
 
 main {
@@ -78,13 +82,22 @@ header img {
     height: var(--header-height);
 }
 
+.bkg-opacity{
 
+}
 
 content {
     width: 80%;
+    color:seashell;
+    background-image: linear-gradient(to right, black, gray);
+    opacity: 0.8;
 }
 
 p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
     margin: var(--gutter);
 }
   
